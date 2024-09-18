@@ -1,84 +1,18 @@
-# ST446 course project
+# PySpark big data project
 
-(revised WT 2024)
+This project is to design recommendation algo using combined Machine Learning algo with Spark, and compares performance under different data size, using distributed computing algorithms and technologies for processing big data and demonstrating performance gains that can be achieved by using distributed computing.
 
-## Project task
+To see the full content please see the file PySpark_ML_Experiment_Report.pdf
+To redo the experiment please ran all the file(except the deprecated file).
 
-You are free to propose a task for your project. Your proposal must be approved by the course lecturer. Your proposal may either be immediately approved or you may be asked to revise and resubmit your proposal.
+## Abstract
 
-Your project should demonstrate that you have acquired a good knowledge of some of the topics on distributed computing for big data covered in the course, with a focus on methodology, distributed computing algorithms and technologies for processing big data and demonstrating performance gains that can be achieved by using distributed computing.
-
-Your implementation would typically be using Spark or possibly some other system, and a dataset suitable for your problem.
-
-Here you may find information about past project topics and links to some references - see [here](./Project-examples.md).
+In Airbnb, a digital platform connecting accommodations and expe- riences, guests frequently invest weeks in exploring and comparing various options before finalizing a reservation. The extensive and investigative process of searching, along with the requirement to consider both guest and host preferences, poses distinct challenges for Airbnb’s search ranking mechanism. In this research we aim to develop a recommendation system for Airbnb listings based on historical user reviews in major cities, focusing on location and dis- tance parameters. By incorporating user feedback and geographical data, our goal is to create a user-friendly system where users spec- ify a location on a map and a radius, and the system recommends the top 10 Airbnb listings within that specified distance. By using this strategy, we aim to improve the user experience by offering accommodations that are relevant to their needs and preferences for closeness.
 
 ## Group work
 
-Your project is a group project, with each group consisting of 3 or 4 students. **Groups of 2 students are not accepted!**
+The advent of online platforms has revolutionized the tourism and hospitality industry, offering travelers a wide array of accommodation options. Among these platforms, Airbnb has emerged as a prominent player, providing users with unique lodging experiences in various cities across the globe. At Airbnb, search is the main way for a guest to discover the right inventory, such as stays, (in-real-life) experiences (i.e. tourism places), online (i.e. virtual) experiences, etc. In this research paper, we delve into the intricate workings of Airbnb data analysis and recommendation systems, focusing on twelve major cities: Paris, London, Toronto, Rome, Amsterdam, Barcelona, Bangkok, Berlin, Bristol, Brussels, Cambridge, and Edinburgh.
 
-You are given the freedom to form groups as you like. We will provide some means to facilitate group formation.
+Deep learning techniques have demonstrated effectiveness across various domains. Chauhan and Palivela utilized LSTM and Glove word embedding for fake news detection on social media, effectively filtering content. Ensafi et al. proposed LSTM for forecasting seasonal item sales, comparing its efficiency with other methods. Ji et al. introduced the STARec model for user preference modeling, highlighting its advantages such as the activity frequency feature but noting drawbacks like abnormal training time, explored future visitor recommendations alongside POI recommendations using KNN and RF. Chen et al. suggested a POI recommendation approach based on user location interest and contextual data, with limitations in handling numerous features. Çakmak et al. analyzed visitation profiles to recommend POIs using link prediction methods. In a reinforcement learning attempt by Massimo and Ricci an IRL-based model was proposed, successfully addressing clustering overheads but struggling with capturing behavioral patterns in large datasets.
 
-You are expected to split the work on your project among yourself. It is expected that each group member to contribute a fair share of technical contributions to the project.
-
-## GitHub
-
-You will be assigned a private repository for your project in the ST446 organisation.
-
-Your entire source code and your project report must be included in this repository.
-
-## Report
-
-### Format of the report
-
-Your report should be formatted according to the [ACM SIG conference proceedings](https://www.overleaf.com/latex/templates/association-for-computing-machinery-acm-sig-proceedings-template/bmvfhcdnxfty) (two-column format).
-
-Your report should be no longer than **eight** pages, not including references, plus unlimited space for references. Your report may have an appendix containing further details of your work.
-
-### Organisation of the report
-
-The layout of the sections of your report should follow the standard structure of a research paper. Here is an example of a research paper organisation:
-
-* **Abstract** The abstract should contain a summary of your report, covering your chosen task, what is your solution, and what are your main results.
-
-* **Introduction** The introduction should give a clear description of your chosen task, why your task is important, what is your solution, why is your solution an appropriate solution for the given problem, and a summary of the main results.
-
-* **Related work** This section should overview related work for the task that you are trying to solve and position your work against related work. Related work would typically be published in research papers.
-
-* **Methodology** This section should describe the underlying distributed computing methodology deployed for your task.
-
-* **Numerical results** This section should present your numerical evaluation results along with a discussion of the results. First, the goals of the numerical evaluations should be clearly described. Second, the datasets used in the evaluation should be described. Third, any evaluation metrics used in this section should be defined. Fourth, any baseline methods used for comparison should be briefly described. Fifth, and last, numerical results should be presented along with discussion.
-
-* **Conclusion** The conclusion section should summarise the content of the report, followed by a discussion of potential future work to address any limitations of the study or to explore new research avenues.
-
-* **Bibliography** The bibliography lists references cited in your report (it is automatically generated by latex). Your report must cite any references that you used in your research, and give proper credit for any concepts or results introduced in previously published work.
-
-At the end of the report, you should put two statements:
-* **Statement about individual contributions**, in which you need to summarise the individual technical contributions of each group member.
-* **Statement about the use of generative AI**, in which you should disclose any use of AI tools as per departmental and course policies. Please, check the guidelines on [Moolde](https://moodle.lse.ac.uk/course/view.php?id=5824).
-
-### Writing tips
-
-Here are some resources on writing research papers that you may find useful for this course but also more generally:
-
-* Jean-Yves Le Boudec, [How to Write a Paper](https://leboudec.github.io/leboudec/resources/paper.html), accessed 2023
-* John N. Tsitsiklis, [A Few Tips on Writing Papers with Mathematical Content](http://web.mit.edu/jnt/www/Papers/R-20-write-v5.pdf), last update 2020, accessed 2023
-* Jon Turner, [How to Write a Great Research Paper](https://www.arl.wustl.edu/~pcrowley/cse/591/writingResearchPapers.pdf), accessed 2023
-
-### Marking
-
-Marking criteria are defined [here](./Project-marking.pdf).
-
-### Important dates
-
-* Week 7
-   * An [Excel sheet](https://docs.google.com/spreadsheets/d/11gja7ItwDAMAoMiED3hlJ8jzB6zZrw62OctdLAS_5xU/edit?usp=sharing) for sharing interests on project topics released
-   * A [Google form](https://docs.google.com/forms/d/e/1FAIpQLSd2ETyh0fNqJSMYrDPWmwl5dsecP_SkMh0YMCTHVFSfF6fpaA/viewform?usp=sf_link) for collecting information about group formation released
-   * A Q\&A session at the end of lecture 7
-* Week 10
-   * Groups formed
-   * Groups are given access to their project repositories on GitHub
-   * Each group submits a project proposal in README.md of their project GitHub repository
-* Week 11
-   * All project proposals approved
-     
-* Check your project repository on GitHub for submission and feedback deadlines
+Our approach to enhancing the search experience for Airbnb guests is comprehensive, integrating several key components to optimize recommendation systems and facilitate informed decision- making. Central to our methodology is the automation of crawling and pre-processing Airbnb data from InsideAirbnb source, utilizing distributed computing techniques such as Apache Spark DataFrame to handle large scale datasets efficiently. This curated dataset, comprising millions of observations from diverse cities, serves as the foundation for insightful analysis and recommendation. In tandem with automated data processing, sentiment analysis plays a pivotal role in our methodology, enabling us to understand the sentiment of user reviews towards Airbnb listings. By leveraging tools like NLTK SentimentIntensityAnalyzer, we gain valuable insights into user preferences and satisfaction levels, informing our recommendation strategies. Moreover, our methodology incorporates interactive visualization methods to present analyzed data in a user-friendly manner. Through the development of intuitive interfaces using ipyleaflet and ipywidgets, users can explore Airbnb listings based on their preferences and geographic locations, enhancing user engagement and facilitating informed decision making. Lastly, optimization strategies are deployed to streamline the recommendation process and enhance search efficiency. Techniques such as geohashing and binary search optimize search algorithms, ensuring a seamless and satisfying user experience, and ultimately driving increased guest conversion rates on Airbnb. Furthermore, we noticed Airbnb users often struggle to plan their trips effectively due to a lack of information on nearby tourist attractions and their distance when choosing to stay on Airbnb. To address such issue, we propose integrating a "Travel Score" into Airbnb’s recommendation system. This feature combines clustering algorithms to geographically categorize listings near tourist sites to assess the distance of these locations. By providing a quantifiable Travel Score, our solution aims to transform Airbnb into a more comprehensive travel planning tool, ensuring accommodations align with travelers’ sightseeing preferences. Overall, our recommendation system enhances Airbnb’s functionality by incorporating a two-dimensional evaluation approach, which includes both a sentiment score and a Travel Score for each stay.
